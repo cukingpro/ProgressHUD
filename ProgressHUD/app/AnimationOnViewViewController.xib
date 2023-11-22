@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationOnViewViewController" customModule="app" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingView" destination="lIa-mU-WSG" id="gtu-v9-gvk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K3X-ht-JeP">
+                    <rect key="frame" x="0.0" y="59" width="393" height="34.333333333333343"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wb5-H4-o8M">
+                            <rect key="frame" x="0.0" y="0.0" width="124.33333333333333" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Show"/>
+                            <connections>
+                                <action selector="show" destination="-1" eventType="touchUpInside" id="CR0-Wr-Sf4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gG-Z8-ZU0">
+                            <rect key="frame" x="134.33333333333334" y="0.0" width="124.33333333333334" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Dissmiss"/>
+                            <connections>
+                                <action selector="dissmiss" destination="-1" eventType="touchUpInside" id="XV6-G1-4tX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdE-hP-Rue">
+                            <rect key="frame" x="268.66666666666669" y="0.0" width="124.33333333333331" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Remove"/>
+                            <connections>
+                                <action selector="remove" destination="-1" eventType="touchUpInside" id="g2u-Ka-kjc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIa-mU-WSG">
+                    <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="RDN-40-qrr"/>
+                        <constraint firstAttribute="width" secondItem="lIa-mU-WSG" secondAttribute="height" multiplier="1:1" id="yMv-af-0eG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="lIa-mU-WSG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0rs-Qk-TN5"/>
+                <constraint firstAttribute="trailing" secondItem="K3X-ht-JeP" secondAttribute="trailing" id="X2E-Kk-1Vn"/>
+                <constraint firstItem="K3X-ht-JeP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Zb6-74-c1E"/>
+                <constraint firstItem="K3X-ht-JeP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="icr-Ls-lqB"/>
+                <constraint firstItem="lIa-mU-WSG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="qyf-Vm-QIp"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

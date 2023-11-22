@@ -90,6 +90,10 @@ ProgressHUD.show("Some text...", symbol: "figure.2.arms.open")
 ```
 
 ```swift
+ProgressHUD.showAnimation(on: view)
+```
+
+```swift
 ProgressHUD.dismiss()
 ```
 

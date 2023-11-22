@@ -146,7 +146,7 @@ extension ViewController {
 extension ViewController {
 
 	override func numberOfSections(in tableView: UITableView) -> Int {
-		return 8
+		return 9
 	}
 
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -159,6 +159,7 @@ extension ViewController {
 		if (section == 5) { return actions3.count	}
 		if (section == 6) { return actions4.count	}
 		if (section == 7) { return actions5.count	}
+        if (section == 8) { return 1 }
 
 		return 0
 	}
@@ -178,6 +179,7 @@ extension ViewController {
 		if (indexPath.section == 5) { return cellWithText(tableView, actions3[indexPath.row]) }
 		if (indexPath.section == 6) { return cellWithText(tableView, actions4[indexPath.row]) }
 		if (indexPath.section == 7) { return cellWithText(tableView, actions5[indexPath.row]) }
+        if (indexPath.section == 8) && (indexPath.row == 0) { return cellWithText(tableView, "Show Animation on view") }
 
 		return UITableViewCell()
 	}
@@ -198,6 +200,7 @@ extension ViewController {
 		if (section == 5) { return "Progress"			}
 		if (section == 6) { return "Action - Static"	}
 		if (section == 7) { return "Action - Animated"	}
+        if (section == 8) { return "Animation on view"  }
 		return nil
 	}
 }
@@ -260,6 +263,13 @@ extension ViewController {
 			if (indexPath.row == 4) { ProgressHUD.showAdded()				}
 			if (indexPath.row == 5) { ProgressHUD.showAdded(textAdded)		}
 		}
+        
+        if (indexPath.section == 8) {
+            if (indexPath.row == 0) {
+                let animationOnViewVC = AnimationOnViewViewController()
+                navigationController?.pushViewController(animationOnViewVC, animated: true)
+            }
+        }
 	}
 }
 

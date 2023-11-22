@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -39,6 +39,8 @@
 		29FD93D92AD9781A0054B585 /* ProgressHUD+HorizontalDotScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FD93C52AD9781A0054B585 /* ProgressHUD+HorizontalDotScaling.swift */; };
 		29FD93DA2AD9781A0054B585 /* ProgressHUD+CircleStrokeSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FD93C62AD9781A0054B585 /* ProgressHUD+CircleStrokeSpin.swift */; };
 		29FD93DB2AD9781A0054B585 /* ProgressHUD+CircleRippleSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FD93C72AD9781A0054B585 /* ProgressHUD+CircleRippleSingle.swift */; };
+		B2CBC8442B0E6B8C0056E18B /* AnimationOnViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CBC8422B0E6B8C0056E18B /* AnimationOnViewViewController.swift */; };
+		B2CBC8452B0E6B8C0056E18B /* AnimationOnViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2CBC8432B0E6B8C0056E18B /* AnimationOnViewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		29FD93C52AD9781A0054B585 /* ProgressHUD+HorizontalDotScaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+HorizontalDotScaling.swift"; sourceTree = "<group>"; };
 		29FD93C62AD9781A0054B585 /* ProgressHUD+CircleStrokeSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleStrokeSpin.swift"; sourceTree = "<group>"; };
 		29FD93C72AD9781A0054B585 /* ProgressHUD+CircleRippleSingle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleRippleSingle.swift"; sourceTree = "<group>"; };
+		B2CBC8422B0E6B8C0056E18B /* AnimationOnViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationOnViewViewController.swift; sourceTree = "<group>"; };
+		B2CBC8432B0E6B8C0056E18B /* AnimationOnViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationOnViewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 		29D29EF31D9A59E4006CA074 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				B2CBC8422B0E6B8C0056E18B /* AnimationOnViewViewController.swift */,
+				B2CBC8432B0E6B8C0056E18B /* AnimationOnViewViewController.xib */,
 				29D29EF81D9A59E4006CA074 /* AppDelegate.swift */,
 				29D29F001D9A59E4006CA074 /* Assets.xcassets */,
 				29D29F051D9A59E4006CA074 /* Info.plist */,
@@ -233,6 +239,7 @@
 			files = (
 				29D29F041D9A59E4006CA074 /* LaunchScreen.storyboard in Resources */,
 				295B8482248C1C5B003E8AE6 /* ViewController.xib in Resources */,
+				B2CBC8452B0E6B8C0056E18B /* AnimationOnViewViewController.xib in Resources */,
 				29D29F011D9A59E4006CA074 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +261,7 @@
 				29FD93CC2AD9781A0054B585 /* ProgressHUD+CircleArcDotSpin.swift in Sources */,
 				29A3BDB12AC6A7500034CAF3 /* ProgressHUD+Banner.swift in Sources */,
 				29FD93CD2AD9781A0054B585 /* ProgressHUD+PacmanProgress.swift in Sources */,
+				B2CBC8442B0E6B8C0056E18B /* AnimationOnViewViewController.swift in Sources */,
 				29FD93C92AD9781A0054B585 /* ProgressHUD+DualDotSidestep.swift in Sources */,
 				29FD93C82AD9781A0054B585 /* ProgressHUD+BarSweepToggle.swift in Sources */,
 				29FD93CB2AD9781A0054B585 /* ProgressHUD+CirclePulseSingle.swift in Sources */,

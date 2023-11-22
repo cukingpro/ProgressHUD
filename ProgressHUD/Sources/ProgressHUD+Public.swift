@@ -221,3 +221,48 @@ public extension ProgressHUD {
 		}
 	}
 }
+
+// MARK: - Show on view
+public extension ProgressHUD {
+    class func showAnimation(on parentView: UIView) {
+        if (shared.viewAnimation == nil) {
+            shared.viewAnimation = UIView(frame: CGRect(x: 0, y: 0, width: parentView.frame.width, height: parentView.frame.height))
+        }
+
+        guard let viewAnimation = shared.viewAnimation else { return }
+
+        if (viewAnimation.superview == nil) {
+            parentView.addSubview(viewAnimation)
+            shared.alpha = 1
+        }
+
+        viewAnimation.subviews.forEach {
+            $0.removeFromSuperview()
+        }
+
+        viewAnimation.layer.sublayers?.forEach {
+            $0.removeFromSuperlayer()
+        }
+
+        if (animationType == .activityIndicator)        { shared.animationActivityIndicator(viewAnimation, colorAnimation)        }
+        if (animationType == .ballVerticalBounce)        { shared.animationBallVerticalBounce(viewAnimation, colorAnimation)    }
+        if (animationType == .barSweepToggle)            { shared.animationBarSweepToggle(viewAnimation, colorAnimation)        }
+        if (animationType == .circleArcDotSpin)            { shared.animationCircleArcDotSpin(viewAnimation, colorAnimation)        }
+        if (animationType == .circleBarSpinFade)        { shared.animationCircleBarSpinFade(viewAnimation, colorAnimation)        }
+        if (animationType == .circleDotSpinFade)        { shared.animationCircleDotSpinFade(viewAnimation, colorAnimation)        }
+        if (animationType == .circlePulseMultiple)        { shared.animationCirclePulseMultiple(viewAnimation, colorAnimation)    }
+        if (animationType == .circlePulseSingle)        { shared.animationCirclePulseSingle(viewAnimation, colorAnimation)        }
+        if (animationType == .circleRippleMultiple)        { shared.animationCircleRippleMultiple(viewAnimation, colorAnimation)    }
+        if (animationType == .circleRippleSingle)        { shared.animationCircleRippleSingle(viewAnimation, colorAnimation)    }
+        if (animationType == .circleRotateChase)        { shared.animationCircleRotateChase(viewAnimation, colorAnimation)        }
+        if (animationType == .circleStrokeSpin)            { shared.animationCircleStrokeSpin(viewAnimation, colorAnimation)        }
+        if (animationType == .dualDotSidestep)            { shared.animationDualDotSidestep(viewAnimation, colorAnimation)        }
+        if (animationType == .horizontalBarScaling)        { shared.animationHorizontalBarScaling(viewAnimation, colorAnimation)    }
+        if (animationType == .horizontalDotScaling)        { shared.animationHorizontalDotScaling(viewAnimation, colorAnimation)    }
+        if (animationType == .pacmanProgress)            { shared.animationPacmanProgress(viewAnimation, colorAnimation)        }
+        if (animationType == .quintupleDotDance)        { shared.animationQuintupleDotDance(viewAnimation, colorAnimation)        }
+        if (animationType == .semiRingRotation)            { shared.animationSemiRingRotation(viewAnimation, colorAnimation)        }
+        if (animationType == .squareCircuitSnake)        { shared.animationSquareCircuitSnake(viewAnimation, colorAnimation)    }
+        if (animationType == .triangleDotShift)            { shared.animationTriangleDotShift(viewAnimation, colorAnimation)        }
+    }
+}
